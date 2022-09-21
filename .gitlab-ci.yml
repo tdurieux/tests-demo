@@ -16,4 +16,9 @@ pylint:
 pytest:
   stage: Test
   script:
-  - cd project/test/;pytest -v
+    - pytest -v --junitxml=report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+
