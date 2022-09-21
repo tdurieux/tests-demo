@@ -6,6 +6,6 @@ def find(nums):
     for num in nums:
         if num < smallest:
             smallest = num
-        elif num > highest:
+        if num > highest:
             highest = num
     return smallest, highest
